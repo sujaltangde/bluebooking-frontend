@@ -14,6 +14,8 @@ export const Login = () => {
     try {
       const googleUserData = await signInSignUpWithGoogle();
       console.log(googleUserData);
+      alert(googleUserData);
+
     } catch (error) {
       console.error(error);
     }

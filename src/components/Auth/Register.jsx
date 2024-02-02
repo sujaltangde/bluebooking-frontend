@@ -14,6 +14,8 @@ export const Register = () => {
       const googleUserData = await signInSignUpWithGoogle();
       console.log(googleUserData);
 
+      alert(googleUserData);
+
       const data = {
         name,
         email, 
