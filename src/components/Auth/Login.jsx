@@ -14,7 +14,7 @@ export const Login = () => {
     try {
       const googleUserData = await signInSignUpWithGoogle();
       console.log(googleUserData);
-      alert(googleUserData);
+      alert(JSON.stringify(googleUserData));
 
     } catch (error) {
       console.error(error);
