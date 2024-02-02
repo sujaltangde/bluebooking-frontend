@@ -87,16 +87,27 @@ export const Login = () => {
                 onClick={() => setChecked(!checked)}
                 className="flex cursor-pointer items-center gap-2"
               >
-                <input type="checkbox" checked={checked} name="" id="" />{" "}
+                <input type="checkbox" checked={checked} onChange={() => setChecked(!checked)} name="" id="" />{" "}
                 <p className="text-sm">I agree to the Terms and Conditions.</p>
               </div>
               <div className="pt-1">
-                <button
-                  type="submit"
-                  className="w-full font-semibold bg-blue-500 rounded py-1.5 text-white"
-                >
-                  Sign in
-                </button>
+              {!checked ? (
+                  <button
+                    disabled={!checked}
+                    type="submit"
+                    className="w-full font-semibold bg-blue-500   py-1.5 rounded text-white"
+                  >
+                    Sign in
+                  </button>
+                ) : (
+                  <button
+                    disabled={!checked}
+                    type="submit"
+                    className="w-full font-semibold bg-blue-500  hover:bg-blue-600 py-1.5 rounded text-white"
+                  >
+                    Sign in
+                  </button>
+                )}
               </div>
               <div className="text-sm">
                 <p>

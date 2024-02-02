@@ -19,7 +19,6 @@ function App() {
 
   useEffect(() => {
     setPath(location.pathname);
-    console.log(location.pathname);
   }, [location]);
 
   return (
